@@ -39,7 +39,7 @@ foreach ($lines as $value) {
 <html>
 <body>
     <div>
-        <h1>Quiz Login Page</h1>
+        <h1>Login Page</h1>
         <form action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
                        
                         <div>
