@@ -25,7 +25,7 @@ public class AppTest
 	WebDriverWait wait; 
 	String url = "http://192.168.110.139:5000";
 	String url2 = "http://192.168.110.139:5000/result.php";
-	String validEmail = "userm";
+	String validEmail = "userV";
 	String validPassword = "1234";
 	String invalidEmail = "none@example.com";
 	String invalidPassword = "password";
@@ -42,7 +42,7 @@ public class AppTest
 	}	 
 	
     @Test
-    public void Validation() 
+    public void Success() 
 		throws InterruptedException { 
 
 		//get web page
@@ -52,19 +52,19 @@ public class AppTest
 
 		//enter input
 		//driver.findElement(By.name("email")).sendKeys(validEmail);
-		driver.findElement(By.name("searchItem")).sendKeys(validPassword);
+		driver.findElement(By.name("password")).sendKeys(validEmail);
 		//click submit
 		driver.findElement(By.name("submit")).submit();
 	
 		//check result 
 		//String expectedResult = "Dashboard |"; 
 	    	driver.get(url);
-		boolean isResultCorrect = wait.until(ExpectedConditions.titleContains("Home")); 
+		boolean isResultCorrect = wait.until(ExpectedConditions.titleContains("Results")); 
 		assertTrue(isResultCorrect == true); 
 	}
 
 	    @Test
-    public void next() 
+    public void fail() 
 		throws InterruptedException { 
 
 		//get web page
@@ -74,13 +74,13 @@ public class AppTest
 
 		//enter input
 		//driver.findElement(By.name("email")).sendKeys(validEmail);
-		driver.findElement(By.name("searchItem")).sendKeys(validEmail);
+		driver.findElement(By.name("password")).sendKeys(validPassword);
 		//click submit
 		driver.findElement(By.name("submit")).submit();
 	
 		//check result 
 		//String expectedResult = "Dashboard |"; 
-		boolean isResultCorrect = wait.until(ExpectedConditions.titleContains("Results")); 
+		boolean isResultCorrect = wait.until(ExpectedConditions.titleContains("Home")); 
 		assertTrue(isResultCorrect == true); 
 	}
 
