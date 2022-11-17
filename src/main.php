@@ -3,7 +3,7 @@ session_start();
 
 if($_SERVER["REQUEST_METHOD"] == "POST") {
 	$user_password = $_POST["password"];
-	$file = fopen('password.txt', 'r');
+	$file = fopen('top-1000.txt', 'r');
 	while(!feof($file)){
 		$line = fgets($file);
 		if(trim($line) == $user_password){
