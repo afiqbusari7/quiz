@@ -26,7 +26,7 @@ public class AppTest
 	String url = "http://192.168.110.139:5000";
 	String url2 = "http://192.168.110.139:5000/result.php";
 	String validEmail = "userm";
-	String validPassword = "/<(.*)>/;";
+	String validPassword = "1234";
 	String invalidEmail = "none@example.com";
 	String invalidPassword = "password";
 
