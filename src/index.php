@@ -37,9 +37,11 @@ foreach ($lines as $value) {
 
 <!DOCTYPE html>
 <html>
+<title>Home</title>
 <body>
     <div>
         <h1>Login Page</h1>
+	
         <form action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
                        
                         <div>
