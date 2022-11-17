@@ -17,6 +17,7 @@
 
 <!DOCTYPE html>
 <html>
+	<title>Results</title>
 <body>
     <div>
         <h1>Quiz Welcome Page</h1>
